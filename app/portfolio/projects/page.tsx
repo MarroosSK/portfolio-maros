@@ -19,13 +19,17 @@ const ProjectsPage = () => {
           <Card key={project.id}>
             <CardContent className="px-0 pb-2 w-full flex flex-col ">
               <div className="w-full relative">
-                <Image
-                  src={project.img}
-                  height={300}
-                  width={500}
-                  className="w-full rounded-t-lg aspect-video object-cover"
-                  alt={project.title}
-                />
+                {project.img ? (
+                  <Image
+                    src={project.img}
+                    height={300}
+                    width={500}
+                    className="w-full rounded-t-lg aspect-video object-cover"
+                    alt={project.title}
+                  />
+                ) : (
+                  <p>loading</p>
+                )}
                 <Badge className="absolute top-2 right-2">
                   {project.category}
                 </Badge>

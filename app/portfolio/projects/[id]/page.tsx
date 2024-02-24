@@ -34,10 +34,14 @@ const ProjectIdPage = ({ params }: { params: { id: string } }) => {
         <CardContent>
           <div className="space-y-2">
             <div className="space-y-1">
-              <Image
-                src={projects?.img as string}
-                alt={projects?.title as string}
-              />
+              {projects ? (
+                <Image
+                  src={projects?.img as string}
+                  alt={projects?.title as string}
+                />
+              ) : (
+                <p>Loading</p>
+              )}
             </div>
             <div className="space-y-1">
               <p className="mt-6 leading-6">{projects?.info}</p>
@@ -45,7 +49,7 @@ const ProjectIdPage = ({ params }: { params: { id: string } }) => {
           </div>
           <div className="mt-3 space-y-1">
             <p className="text-lg text-muted-foreground">Technologies</p>
-            <div className=" mt-2  hidden md:flex items-center flex-wrap gap-2">
+            <div className=" mt-2  flex items-center flex-wrap gap-2">
               {projects?.stack.map((tech: string, index: number) => (
                 <Badge key={index} variant="outline">
                   {tech}
