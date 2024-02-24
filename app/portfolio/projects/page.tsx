@@ -24,8 +24,9 @@ const ProjectsPage = () => {
         </div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-center gap-7">
-        {!status && Array(6).fill(<SkeletonCard />)}
-        {status && (
+        {!status ? (
+          Array(6).fill(<SkeletonCard />)
+        ) : (
           <>
             {projectsData.map((project) => (
               <Card key={project.id}>
