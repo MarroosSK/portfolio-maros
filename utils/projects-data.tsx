@@ -13,6 +13,8 @@ interface projectsI {
   title: string;
   url: string;
   info: string;
+  credentials_email?: string;
+  credentials_password?: string;
   source: string;
   img: string | StaticImageData;
   stack: string[];
@@ -24,9 +26,9 @@ export const projectsData: projectsI[] = [
     id: 1,
     title: "Ticket Panel - admin dashboard",
     url: "https://part2-tickets-admin.vercel.app",
-    info: `This application is inspired in support web page i found on the internet. Logged in admins can track current tickets, change their status or make operations (filter/sort) with them. It uses next auth, either create random email + password, or use these:
-  
-      email: john@gmail.com password: 123456`,
+    info: `This application is inspired in support web page i found on the internet. Logged in admins can track current tickets, change their status or make operations (filter/sort) with them. It uses next auth, either create random email + password, or use these:`,
+    credentials_email: "john@gmail.com",
+    credentials_password: "123456",
     source: "https://github.com/MarroosSK/part2-tickets-admin",
     img: adminDashboard,
     stack: ["Next.Js", "Typescript", "ShadCN", "Zustand", "Axios"],
@@ -36,7 +38,9 @@ export const projectsData: projectsI[] = [
     id: 2,
     title: "MA Gallery",
     url: "https://ma-gallery.vercel.app",
-    info: "Create your own personal galleries. To log in with dummy credentials type jane+clerk_test@example.com in email input and 424242 in password input.",
+    info: "Create your own personal galleries. To log in with dummy credentials:",
+    credentials_email: "magallery+clerk_test@example.com",
+    credentials_password: "magallery2402",
     source: "https://github.com/MarroosSK/ma-gallery",
     img: maGallery,
     stack: ["Next.Js", "Typescript", "ShadCN", "Zustand", "Clerk Auth"],
@@ -47,6 +51,8 @@ export const projectsData: projectsI[] = [
     title: "Business GO",
     url: "https://business-listing-dusky.vercel.app",
     info: "BusinessGO is app, that allows you to search for all local businesses using Yelp API.",
+    credentials_email: "",
+    credentials_password: "",
     source: "https://github.com/MarroosSK/business-listing",
     img: businessGO,
     stack: ["Next.Js", "Typescript", "ShadCN", "Zustand", "Axios"],
@@ -57,6 +63,8 @@ export const projectsData: projectsI[] = [
     title: "First 15 Gallery",
     url: "https://8gallery.netlify.app/",
     info: "Gallery app made with typescript and redux toolkit. Purpose of this app is to allow user search for pictures and display them in modal.",
+    credentials_email: "",
+    credentials_password: "",
     source: "https://github.com/MarroosSK/8_gallery",
     img: gallery,
     stack: ["React.Js", "Typescript", "Material-UI", "Redux-Toolkit", "Axios"],
@@ -67,6 +75,8 @@ export const projectsData: projectsI[] = [
     title: "Where Have You Been? (Full-Stack)",
     url: "https://17-visit-blog.vercel.app",
     info: "Travelling blog. You can try to create your own blog. You can also search for certain blogs or filter by category.",
+    credentials_email: "",
+    credentials_password: "",
     source: "https://github.com/MarroosSK/17.Visit_Blog",
     img: whyb,
     stack: ["React.Js", "Typescript", "Express", "React Query", "React-Quill"],
@@ -77,6 +87,8 @@ export const projectsData: projectsI[] = [
     title: "Vortex Courses",
     url: "https://16-vortex-courses.vercel.app",
     info: "Vortex courses made with typescript. Purpose of this app is to allow users to enroll course they want.",
+    credentials_email: "",
+    credentials_password: "",
     source: "https://github.com/MarroosSK/16_Vortex_courses",
     img: vortex,
     stack: ["React.Js", "Typescript", "Framer Motion", "Router Dom", "Axios"],
@@ -87,6 +99,8 @@ export const projectsData: projectsI[] = [
     title: "ReacTY - React Basics",
     url: "https://react-basics-chi.vercel.app",
     info: "React Basics app inspired in W3-School learning material for React. Purpose of this app is to give quick intro to people looking for learning React.",
+    credentials_email: "",
+    credentials_password: "",
     source: "https://github.com/MarroosSK/13_react_basics",
     img: basics,
     stack: [
@@ -103,6 +117,8 @@ export const projectsData: projectsI[] = [
     title: "Dictionary",
     url: "https://3dictionary.netlify.app",
     info: "Find meaning of any word. Inspiration taken at react examples website. Purpose of this ap is to work as online dictionary in english language.",
+    credentials_email: "",
+    credentials_password: "",
     source: "https://github.com/MarroosSK/3_dictionary",
     img: dictionary,
     stack: ["React.Js", "Typescript", "Bootstrap", "ContextAPI", "React-Icons"],

@@ -57,6 +57,23 @@ const ProjectIdPage = ({ params }: { params: { id: string } }) => {
             <div className="space-y-1">
               <p className="mt-6 leading-6">{projects?.info}</p>
             </div>
+            {projects?.credentials_email?.length !== 0 &&
+              projects?.credentials_password?.length !== 0 && (
+                <div className="mt-2 flex flex-col">
+                  <p className="font-bold">
+                    Email:{" "}
+                    <span color="text-primary font-semibold">
+                      {projects?.credentials_email}
+                    </span>
+                  </p>
+                  <p className="font-bold">
+                    Password:{" "}
+                    <span color="text-primary font-semibold">
+                      {projects?.credentials_password}
+                    </span>
+                  </p>
+                </div>
+              )}
           </div>
           <div className="mt-3 space-y-1">
             <p className="text-lg text-muted-foreground">Technologies</p>
