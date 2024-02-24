@@ -38,7 +38,7 @@ export const projectsData: projectsI[] = [
     id: 2,
     title: "MA Gallery",
     url: "https://ma-gallery.vercel.app",
-    info: "Create your own personal galleries. To log in with dummy credentials:",
+    info: "Create your own personal galleries. User can create albums and add photos in them. Only logged in/ registered users can use this app. To log in with dummy credentials:",
     credentials_email: "magallery+clerk_test@example.com",
     credentials_password: "magallery2402",
     source: "https://github.com/MarroosSK/ma-gallery",
