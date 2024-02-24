@@ -7,7 +7,7 @@ import mIcon from "../public/Micon2.png";
 
 const Navbar = () => {
   return (
-    <nav className="border-b bg-background h-[10vh] flex items-center">
+    <nav className="border-b bg-background h-[10vh] landscape:h-[13vh] flex items-center">
       <div className="container flex items-center justify-between">
         <Link href="/">
           <div className="flex flex-row items-center justify-center ">

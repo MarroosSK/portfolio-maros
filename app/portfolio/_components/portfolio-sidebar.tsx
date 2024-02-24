@@ -9,7 +9,7 @@ import { usePathname } from "next/navigation";
 const PortfolioSidebar = () => {
   const pathname = usePathname();
   return (
-    <div className="grid items-start gap-2">
+    <div className="grid items-start gap-2 sticky top-[50px] overflow-hidden">
       {navData.map((link) => (
         <Link key={link.name} href={link.href}>
           <span

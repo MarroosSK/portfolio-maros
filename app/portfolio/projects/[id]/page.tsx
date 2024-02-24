@@ -1,3 +1,6 @@
+"use client";
+
+import { SkeletonImage } from "@/components/skeleton-image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -12,12 +15,20 @@ import { projectsData } from "@/utils/projects-data";
 import { ChevronLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const ProjectIdPage = ({ params }: { params: { id: string } }) => {
+  const [status, setStatus] = useState(false);
+
   const projects = projectsData.find(
     (project) => project.id === parseInt(params.id)
   );
 
+  useEffect(() => {
+    if (projects) {
+      setStatus(true);
+    }
+  }, []);
   return (
     <div className="grid items-start gap-8">
       <Link href={"/portfolio/projects"}>
@@ -34,13 +45,13 @@ const ProjectIdPage = ({ params }: { params: { id: string } }) => {
         <CardContent>
           <div className="space-y-2">
             <div className="space-y-1">
-              {projects ? (
+              {status ? (
                 <Image
                   src={projects?.img as string}
                   alt={projects?.title as string}
                 />
               ) : (
-                <p>Loading</p>
+                <SkeletonImage />
               )}
             </div>
             <div className="space-y-1">
