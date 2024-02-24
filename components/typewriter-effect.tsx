@@ -10,7 +10,7 @@ const TypewriterEffect = () => {
         autoStart: true,
         loop: true,
         delay: 85,
-        wrapperClassName: "text-secondary-foreground",
+        wrapperClassName: "text-muted-foreground",
       }}
     />
   );

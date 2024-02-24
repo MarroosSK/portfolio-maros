@@ -27,12 +27,18 @@ const UserNav = ({
     <>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="ghost" className="relative h-10 w-10 rounded-full">
+          <Button
+            id="buttonProfile"
+            title="Profile"
+            variant="ghost"
+            className="relative h-10 w-10 rounded-full"
+          >
             <Avatar className="h-10 w-10 rounded-full">
               <AvatarImage
                 src={
                   "https://avatars.githubusercontent.com/u/103311716?s=400&u=2ff3394310209818eacb1ec3f81a73dc2311039a&v=4"
                 }
+                alt={name}
               />
               <AvatarFallback>{name}</AvatarFallback>
             </Avatar>
