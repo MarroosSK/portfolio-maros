@@ -24,7 +24,7 @@ export const projectsData: projectsI[] = [
   {
     id: 1,
     title: "noteSITE",
-    url: "https://part2-tickets-admin.vercel.app",
+    url: "https://note-site-app.vercel.app",
     info: `This application allows you to create custom notes using bold or italic text, various headings or drag & drop method. It uses next auth, either create random email + password, or use these:`,
     credentials_email: "notesite+clerk_test@example.com",
     credentials_password: "notesite2802",

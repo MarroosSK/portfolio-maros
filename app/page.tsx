@@ -1,4 +1,3 @@
-import TypewriterEffect from "@/components/typewriter-effect";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -10,16 +9,14 @@ export default function Home() {
           <div>
             <span className="w-auto px-6 py-3 rounded-full border">
               <span className="text-sm font-medium text-primary">
-                portfolio
+                My name is Maroš
               </span>
             </span>
 
             <h1 className="mt-8 text-3xl font-extrabold tracking-tight lg:text-6xl">
-              Hi, i am Maroš<span className="text-primary">.</span>
+              I am React & Next.js{" "}
+              <span className="text-primary">aspiring developer</span>.
             </h1>
-            <div className="max-w-xl mx-auto mt-8 text-base lg:text-xl text-secondary-foreground">
-              <TypewriterEffect />
-            </div>
           </div>
 
           <div className="flex justify-center max-w-xs mx-auto mt-10">

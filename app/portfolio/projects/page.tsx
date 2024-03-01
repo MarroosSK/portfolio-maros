@@ -37,7 +37,7 @@ const ProjectsPage = () => {
           <h1 className="text-3xl md:text-4xl ">Projects</h1>
           <p className="text-lg text-muted-foreground">My latest work</p>
         </div>
-        <div className="flex w-full max-w-sm items-center ">
+        <div className="mt-3 sm:mt-0 flex w-full max-w-sm items-center ">
           <Input
             type="text"
             placeholder="Search for Project"
@@ -58,14 +58,15 @@ const ProjectsPage = () => {
           : filteredProjects.map((project) => (
               <Card key={project.id}>
                 <CardContent className="px-0 pb-2 w-full flex flex-col ">
-                  <div className="w-full relative">
+                  <div className="w-full  relative">
                     {project.img ? (
                       <Image
                         src={project.img}
                         height={300}
                         width={500}
-                        className="w-full rounded-t-lg aspect-video object-cover"
+                        className="w-full rounded-t-lg aspect-video object-cover duration-700 ease-in-out bg-muted  scale-100 blur-0 grayscale-0 "
                         alt={project.title}
+                        loading="lazy"
                       />
                     ) : (
                       <p>loading</p>

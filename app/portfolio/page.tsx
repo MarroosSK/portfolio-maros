@@ -17,7 +17,6 @@ const PortfolioPage = () => {
       <div className="flex items-center justify-between px-2">
         <div className="grid gap-1">
           <h1 className="text-3xl md:text-4xl ">About</h1>
-          <p className="text-lg text-muted-foreground">Briefly about me</p>
         </div>
       </div>
 
@@ -25,13 +24,13 @@ const PortfolioPage = () => {
         <CardHeader>
           <CardTitle>Maroš Chmeľ</CardTitle>
           <CardDescription className="leading-6">
-            React & Next.js learner
+            React & Next.js aspiring developer
           </CardDescription>
         </CardHeader>
         <CardContent>
           <div className="space-y-2">
             <div className="space-y-1 leading-6">
-              Hi! My name is Maroš Chmeľ. I am React & Next.js learner from{" "}
+              Hi! My name is Maroš Chmeľ. I am from{" "}
               <Button variant="outline" size="sm" asChild>
                 <Link
                   href="https://www.google.com/search?&q=vranov+nad+topľou"
@@ -49,8 +48,8 @@ const PortfolioPage = () => {
               </Button>
               . I have been studying for about a year, improving my skills by
               creating projects, yet i am missing experience from real-world
-              projects and that is why i consider myself learner. My goal is to
-              change this state into developer (not by using useState
+              projects and that is why i consider myself aspiring developer. My
+              goal is to change this state into developer (not by using useState
               &#128522;).
             </div>
             <div className="space-y-1">
