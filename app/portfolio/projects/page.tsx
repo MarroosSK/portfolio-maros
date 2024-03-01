@@ -4,31 +4,58 @@ import { SkeletonCard } from "@/components/skeleton-card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { projectsData } from "@/utils/projects-data";
+import { Input } from "@/components/ui/input";
+import { projectsData, projectsI } from "@/utils/projects-data";
+import { Search } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const ProjectsPage = () => {
-  const [status, setStatus] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [searchWord, setSearchWord] = useState<string>("");
+  const [filteredProjects, setFilteredProjects] =
+    useState<projectsI[]>(projectsData);
+
+  const handleSearch = async (word: string) => {
+    setLoading(true);
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    const data = projectsData.filter((project) =>
+      project.title.toLowerCase().includes(word.toLowerCase())
+    );
+    setFilteredProjects(data);
+    setLoading(false);
+  };
 
   useEffect(() => {
-    setStatus(true);
+    setLoading(false);
   }, []);
   return (
     <div className="grid items-start gap-8">
-      <div className="flex items-center justify-between px-2">
+      <div className="flex flex-col sm:flex-row items-center justify-between px-2">
         <div className="grid gap-1">
           <h1 className="text-3xl md:text-4xl ">Projects</h1>
           <p className="text-lg text-muted-foreground">My latest work</p>
         </div>
+        <div className="flex w-full max-w-sm items-center ">
+          <Input
+            type="text"
+            placeholder="Search for Project"
+            value={searchWord}
+            onChange={(e) => setSearchWord(e.target.value)}
+          />
+          <Button type="button" onClick={() => handleSearch(searchWord)}>
+            <Search />
+          </Button>
+        </div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-center gap-7">
-        {!status ? (
-          Array(6).fill(<SkeletonCard />)
-        ) : (
-          <>
-            {projectsData.map((project) => (
+        {!loading && filteredProjects.length === 0 && (
+          <p>No projects with such name found</p>
+        )}
+        {loading
+          ? Array(6).fill(<SkeletonCard />)
+          : filteredProjects.map((project) => (
               <Card key={project.id}>
                 <CardContent className="px-0 pb-2 w-full flex flex-col ">
                   <div className="w-full relative">
@@ -70,8 +97,6 @@ const ProjectsPage = () => {
                 </CardContent>
               </Card>
             ))}
-          </>
-        )}
       </div>
     </div>
   );
