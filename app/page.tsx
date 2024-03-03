@@ -8,14 +8,14 @@ export default function Home() {
         <div className="max-w-3xl mx-auto text-center">
           <div>
             <span className="w-auto px-6 py-3 rounded-full border">
-              <span className="text-sm font-medium text-primary">
-                My name is Maroš
+              <span className="text-lg font-medium text-primary">
+                My name is Maroš,
               </span>
             </span>
 
             <h1 className="mt-8 text-3xl font-extrabold tracking-tight lg:text-6xl">
-              I am React & Next.js{" "}
-              <span className="text-primary">aspiring developer</span>.
+              and i am an aspiring React & Next.js{" "}
+              <span className="text-primary"> developer</span>.
             </h1>
           </div>
 
