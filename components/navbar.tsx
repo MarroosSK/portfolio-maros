@@ -4,18 +4,25 @@ import { ThemeSwitcher } from "./theme-switcher";
 import UserNav from "./user-nav";
 import Image from "next/image";
 import mIcon from "../public/Micon2.png";
+import MobileMenu from "./mobile-menu";
 
 const Navbar = () => {
   return (
     <nav className="border-b bg-background h-[10vh] landscape:h-[13vh] flex items-center">
       <div className="container flex items-center justify-between">
-        <Link href="/">
-          <div className="flex flex-row items-center justify-center ">
-            <Image src={mIcon} alt="logo-icon" height={35} width={35} />
-
-            <p className="text-lg text-muted-foreground">arroos</p>
+        {/* <Menu /> */}
+        <div className="flex items-center gap-y-5">
+          <div className="md:hidden">
+            <MobileMenu />
           </div>
-        </Link>
+          <Link href="/" className="hidden md:flex">
+            <div className="flex flex-row items-center justify-center ">
+              <Image src={mIcon} alt="logo-icon" height={35} width={35} />
+
+              <p className="text-lg text-muted-foreground">arroos</p>
+            </div>
+          </Link>
+        </div>
 
         <div className="flex items-center gap-x-5">
           <ThemeSwitcher />

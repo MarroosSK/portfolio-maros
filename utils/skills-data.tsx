@@ -11,6 +11,8 @@ import {
   SiPostgresql,
   SiTailwindcss,
   SiNextdotjs,
+  SiSanity,
+  SiGraphql,
 } from "react-icons/si";
 import { DiJavascript1 } from "react-icons/di";
 import { BsBootstrapFill } from "react-icons/bs";
@@ -98,5 +100,15 @@ export const skillsData: skillsDataI[] = [
     id: 15,
     name: "Prisma",
     icon: <SiPrisma size={35} />,
+  },
+  {
+    id: 16,
+    name: "Sanity.io",
+    icon: <SiSanity size={35} />,
+  },
+  {
+    id: 17,
+    name: "GraphQl",
+    icon: <SiGraphql size={35} />,
   },
 ];
