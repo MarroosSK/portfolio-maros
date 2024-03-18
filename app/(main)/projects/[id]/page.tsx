@@ -31,8 +31,8 @@ const ProjectIdPage = ({ params }: { params: { id: string } }) => {
   }, []);
   return (
     <div className="grid items-start gap-8">
-      <Link href={"/portfolio/projects"}>
-        <ChevronLeft className="border rounded-full cursor-pointer hover:bg-slate-200 dark:hover:bg-slate-600" />
+      <Link href={"/projects"}>
+        <ChevronLeft className=" cursor-pointer hover:scale-125 transition-all ease-in-out " />
       </Link>
 
       <Card>
@@ -43,7 +43,7 @@ const ProjectIdPage = ({ params }: { params: { id: string } }) => {
               alt={projects?.title as string}
               height={1200}
               width={1200}
-              className="w-full h-full rounded-t-lg aspect-video object-cover"
+              className="w-full h-full rounded-t-lg aspect-video object-cover object-center"
             />
           ) : (
             <SkeletonImage />

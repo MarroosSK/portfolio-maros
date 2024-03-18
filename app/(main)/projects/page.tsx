@@ -64,7 +64,7 @@ const ProjectsPage = () => {
                         src={project.img}
                         height={300}
                         width={500}
-                        className="w-full rounded-t-lg aspect-video object-cover duration-700 ease-in-out bg-muted  scale-100 blur-0 grayscale-0 "
+                        className="w-full rounded-t-lg aspect-video object-cover object-center duration-700 ease-in-out bg-muted  scale-100 blur-0 grayscale-0 "
                         alt={project.title}
                         loading="lazy"
                       />
@@ -90,9 +90,7 @@ const ProjectsPage = () => {
                       ))}
                     </div>
                     <Button className="m-2" asChild>
-                      <Link href={`/portfolio/projects/${project.id}`}>
-                        Details
-                      </Link>
+                      <Link href={`/projects/${project.id}`}>Details</Link>
                     </Button>
                   </div>
                 </CardContent>

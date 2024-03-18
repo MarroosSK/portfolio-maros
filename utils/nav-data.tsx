@@ -13,8 +13,8 @@ interface navLinksI {
 }
 
 export const navData: navLinksI[] = [
-  { name: "About", href: "/portfolio", icon: User },
-  { name: "Skills", href: "/portfolio/skills", icon: BookOpenText },
-  { name: "Projects", href: "/portfolio/projects", icon: FolderSearch },
-  { name: "Contact", href: "/portfolio/contact", icon: Mail },
+  { name: "About", href: "/", icon: User },
+  { name: "Skills", href: "/skills", icon: BookOpenText },
+  { name: "Projects", href: "/projects", icon: FolderSearch },
+  { name: "Contact", href: "/contact", icon: Mail },
 ];
